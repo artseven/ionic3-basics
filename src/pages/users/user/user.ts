@@ -1,8 +1,10 @@
-import { NavParams } from 'ionic-angular';
 import { Component, OnInit } from '@angular/core';
+
+import { NavParams } from 'ionic-angular';
+
 @Component({
     selector: 'page-user',
-    template: 'user.html'
+    templateUrl: 'user.html'
 })
 export class UserPage implements OnInit{
     name: string;
@@ -11,6 +13,6 @@ export class UserPage implements OnInit{
 
     ngOnInit() {
         //get fetches data from navController from previous page in stack
-        this.name = this.navParams.get('username');
+        this.name = this.navParams.get('userName');
     }
 }

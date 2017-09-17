@@ -22,7 +22,30 @@ export class UsersPage {
   ionViewCanEnter(): boolean | Promise<boolean> {
     console.log('ionViewCanEnter');
     const rnd = Math.random();
-    return rnd > 0.5;
+    return rnd > 0.1;
   }
+
+  ionViewDidLoad(){
+   console.log('ionViewDidLoad');
+  }
+
+  ionViewWillEnter(){
+   console.log('ionViewWillEnter');
+  }
+
+  ionViewDidEnter(){
+   console.log('ionViewWillEnter');
+  }
+
+  ionViewCanLeave(): boolean | Promise<void> {
+    const promise = new Promise<void>((resolve, reject) => {
+      setTimeout(()=> {
+      resolve()
+     }, 1000);
+    });
+    return promise;
+  }
+
+
 
 }
